@@ -14,7 +14,7 @@ package com.mycompany.tp2;
 public class StandardQuadraticSolver implements QuadraticSolver {
     
     // Constante pour la comparaison des nombres à virgule flottante
-    private static final double EPSILON = 1e-10;
+    private static final double EPSILON = 1e-9;
     
     /**
      * Détermine si un nombre double est suffisamment proche de zéro pour être considéré comme nul

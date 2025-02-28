@@ -1,0 +1,59 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.tp2.EnhancedQuadraticSolverTest
+-------------------------------------------------------------------------------
+Tests run: 56, Failures: 11, Errors: 0, Skipped: 0, Time elapsed: 1.156 s <<< FAILURE! - in com.mycompany.tp2.EnhancedQuadraticSolverTest
+testCase1(com.mycompany.tp2.EnhancedQuadraticSolverTest)  Time elapsed: 0.175 s  <<< FAILURE!
+java.lang.AssertionError: Cas 1: a=1.00e-06, b=1.00e+08, c=-1.00e+08: Solution invalide pour a=1,00000e-06, b=1,00000e+08, c=-1,00000e+08: x1=-1,00000000e+14 donne f(x)=-1433856,00 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase1(EnhancedQuadraticSolverTest.java:44)
+
+testCase2(com.mycompany.tp2.EnhancedQuadraticSolverTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: Cas 2: a=-1.00e-06, b=1.00e+02, c=1.00e-06: Solution invalide pour a=-1,00000e-06, b=100,000, c=1,00000e-06: x1=100000000 donne f(x)=1,00000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase2(EnhancedQuadraticSolverTest.java:49)
+
+testCase6(com.mycompany.tp2.EnhancedQuadraticSolverTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: Cas 6: a=1.00e+02, b=1.00e+08, c=-1.00e-06: Solution invalide pour a=100,000, b=1,00000e+08, c=-1,00000e-06: x1=-1000000,00 donne f(x)=-1,00000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase6(EnhancedQuadraticSolverTest.java:69)
+
+testCase7(com.mycompany.tp2.EnhancedQuadraticSolverTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: Cas 7: a=1.00e-06, b=1.00e+02, c=1.00e+02: Solution invalide pour a=1,00000e-06, b=100,000, c=100,000: x1=-99999999,0 donne f(x)=1,90734863e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase7(EnhancedQuadraticSolverTest.java:74)
+
+testCase8(com.mycompany.tp2.EnhancedQuadraticSolverTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: Cas 8: a=-1.00e-06, b=1.00e+08, c=1.00e+02: Solution invalide pour a=-1,00000e-06, b=1,00000e+08, c=100,000: x1=1,00000000e+14 donne f(x)=100,000000 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase8(EnhancedQuadraticSolverTest.java:79)
+
+testCase9(com.mycompany.tp2.EnhancedQuadraticSolverTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: Cas 9: a=-1.00e+02, b=1.00e+08, c=1.00e-06: Solution invalide pour a=-100,000, b=1,00000e+08, c=1,00000e-06: x1=1000000,00 donne f(x)=1,00000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase9(EnhancedQuadraticSolverTest.java:84)
+
+testCase21(com.mycompany.tp2.EnhancedQuadraticSolverTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: Cas 21: a=-1.00e-06, b=1.00e+02, c=-1.00e+02: Solution invalide pour a=-1,00000e-06, b=100,000, c=-100,000: x1=99999999,0 donne f(x)=-1,90734863e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase21(EnhancedQuadraticSolverTest.java:144)
+
+testCase24(com.mycompany.tp2.EnhancedQuadraticSolverTest)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.AssertionError: Cas 24: a=1.00e-06, b=-1.00e+02, c=1.00e-06: Solution invalide pour a=1,00000e-06, b=-100,000, c=1,00000e-06: x2=100000000 donne f(x)=1,00000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase24(EnhancedQuadraticSolverTest.java:159)
+
+testCase27(com.mycompany.tp2.EnhancedQuadraticSolverTest)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.AssertionError: Cas 27: a=1.00e-06, b=-1.00e+08, c=1.00e-06: Solution invalide pour a=1,00000e-06, b=-1,00000e+08, c=1,00000e-06: x2=1,00000000e+14 donne f(x)=1,00000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase27(EnhancedQuadraticSolverTest.java:174)
+
+testCase31(com.mycompany.tp2.EnhancedQuadraticSolverTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: Cas 3: a=-1.00e-06, b=0.00e+00, c=-1.00e-06: Solution invalide pour a=-1,00000e-06, b=0,00000, c=-1,00000e-06: x1=0,00000000 donne f(x)=-1,00000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase31(EnhancedQuadraticSolverTest.java:195)
+
+testCase34(com.mycompany.tp2.EnhancedQuadraticSolverTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: Cas 6: a=1.00e-06, b=1.00e-06, c=-1.00e-06: Solution invalide pour a=1,00000e-06, b=1,00000e-06, c=-1,00000e-06: x1=-0,500000000 donne f(x)=-1,25000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase34(EnhancedQuadraticSolverTest.java:210)
+

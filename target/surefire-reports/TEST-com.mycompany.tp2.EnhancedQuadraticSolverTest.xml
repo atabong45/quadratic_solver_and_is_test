@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="1.156" tests="56" errors="0" skipped="0" failures="11">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/atabong/NetBeansProjects/TP2/target/test-classes:/home/atabong/NetBeansProjects/TP2/target/classes:/home/atabong/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/atabong/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/atabong/NetBeansProjects/TP2/target/surefire/surefirebooter8516799667251728594.jar /home/atabong/NetBeansProjects/TP2/target/surefire 2025-02-28T18-10-37_053-jvmRun1 surefire2943039486843749409tmp surefire_04564942363986227952tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="EnhancedQuadraticSolverTest"/>
+    <property name="surefire.test.class.path" value="/home/atabong/NetBeansProjects/TP2/target/test-classes:/home/atabong/NetBeansProjects/TP2/target/classes:/home/atabong/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/atabong/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/atabong"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="/usr/lib/jvm/java-21-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/atabong/NetBeansProjects/TP2"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/atabong/NetBeansProjects/TP2/target/surefire/surefirebooter8516799667251728594.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.6+7-Ubuntu-122.04.1"/>
+    <property name="user.name" value="atabong"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.8.0-52-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/atabong/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-21"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21.0.6"/>
+    <property name="user.dir" value="/home/atabong/NetBeansProjects/TP2"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="21.0.6+7-Ubuntu-122.04.1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testDirectPolynomialEvaluation" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.069"/>
+  <testcase name="testCase1" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.175">
+    <failure message="Cas 1: a=1.00e-06, b=1.00e+08, c=-1.00e+08: Solution invalide pour a=1,00000e-06, b=1,00000e+08, c=-1,00000e+08: x1=-1,00000000e+14 donne f(x)=-1433856,00 (devrait être proche de 0)" type="java.lang.AssertionError">java.lang.AssertionError: Cas 1: a=1.00e-06, b=1.00e+08, c=-1.00e+08: Solution invalide pour a=1,00000e-06, b=1,00000e+08, c=-1,00000e+08: x1=-1,00000000e+14 donne f(x)=-1433856,00 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase1(EnhancedQuadraticSolverTest.java:44)
+</failure>
+  </testcase>
+  <testcase name="testCase2" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.016">
+    <failure message="Cas 2: a=-1.00e-06, b=1.00e+02, c=1.00e-06: Solution invalide pour a=-1,00000e-06, b=100,000, c=1,00000e-06: x1=100000000 donne f(x)=1,00000000e-06 (devrait être proche de 0)" type="java.lang.AssertionError">java.lang.AssertionError: Cas 2: a=-1.00e-06, b=1.00e+02, c=1.00e-06: Solution invalide pour a=-1,00000e-06, b=100,000, c=1,00000e-06: x1=100000000 donne f(x)=1,00000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase2(EnhancedQuadraticSolverTest.java:49)
+</failure>
+  </testcase>
+  <testcase name="testCase3" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.009"/>
+  <testcase name="testCase4" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.006"/>
+  <testcase name="testCase5" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.006"/>
+  <testcase name="testCase6" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.024">
+    <failure message="Cas 6: a=1.00e+02, b=1.00e+08, c=-1.00e-06: Solution invalide pour a=100,000, b=1,00000e+08, c=-1,00000e-06: x1=-1000000,00 donne f(x)=-1,00000000e-06 (devrait être proche de 0)" type="java.lang.AssertionError">java.lang.AssertionError: Cas 6: a=1.00e+02, b=1.00e+08, c=-1.00e-06: Solution invalide pour a=100,000, b=1,00000e+08, c=-1,00000e-06: x1=-1000000,00 donne f(x)=-1,00000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase6(EnhancedQuadraticSolverTest.java:69)
+</failure>
+  </testcase>
+  <testcase name="testCase7" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.009">
+    <failure message="Cas 7: a=1.00e-06, b=1.00e+02, c=1.00e+02: Solution invalide pour a=1,00000e-06, b=100,000, c=100,000: x1=-99999999,0 donne f(x)=1,90734863e-06 (devrait être proche de 0)" type="java.lang.AssertionError">java.lang.AssertionError: Cas 7: a=1.00e-06, b=1.00e+02, c=1.00e+02: Solution invalide pour a=1,00000e-06, b=100,000, c=100,000: x1=-99999999,0 donne f(x)=1,90734863e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase7(EnhancedQuadraticSolverTest.java:74)
+</failure>
+  </testcase>
+  <testcase name="testCase8" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.016">
+    <failure message="Cas 8: a=-1.00e-06, b=1.00e+08, c=1.00e+02: Solution invalide pour a=-1,00000e-06, b=1,00000e+08, c=100,000: x1=1,00000000e+14 donne f(x)=100,000000 (devrait être proche de 0)" type="java.lang.AssertionError">java.lang.AssertionError: Cas 8: a=-1.00e-06, b=1.00e+08, c=1.00e+02: Solution invalide pour a=-1,00000e-06, b=1,00000e+08, c=100,000: x1=1,00000000e+14 donne f(x)=100,000000 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase8(EnhancedQuadraticSolverTest.java:79)
+</failure>
+  </testcase>
+  <testcase name="testCase9" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.011">
+    <failure message="Cas 9: a=-1.00e+02, b=1.00e+08, c=1.00e-06: Solution invalide pour a=-100,000, b=1,00000e+08, c=1,00000e-06: x1=1000000,00 donne f(x)=1,00000000e-06 (devrait être proche de 0)" type="java.lang.AssertionError">java.lang.AssertionError: Cas 9: a=-1.00e+02, b=1.00e+08, c=1.00e-06: Solution invalide pour a=-100,000, b=1,00000e+08, c=1,00000e-06: x1=1000000,00 donne f(x)=1,00000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase9(EnhancedQuadraticSolverTest.java:84)
+</failure>
+  </testcase>
+  <testcase name="testCase10" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.001"/>
+  <testcase name="testCase11" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.005"/>
+  <testcase name="testCase12" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.006"/>
+  <testcase name="testCase13" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.004"/>
+  <testcase name="testCase14" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.007"/>
+  <testcase name="testCase15" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0"/>
+  <testcase name="testCase16" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.007"/>
+  <testcase name="testCase17" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.002"/>
+  <testcase name="testCase18" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.004"/>
+  <testcase name="testCase19" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0"/>
+  <testcase name="testCase20" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.007"/>
+  <testcase name="testCase21" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.008">
+    <failure message="Cas 21: a=-1.00e-06, b=1.00e+02, c=-1.00e+02: Solution invalide pour a=-1,00000e-06, b=100,000, c=-100,000: x1=99999999,0 donne f(x)=-1,90734863e-06 (devrait être proche de 0)" type="java.lang.AssertionError">java.lang.AssertionError: Cas 21: a=-1.00e-06, b=1.00e+02, c=-1.00e+02: Solution invalide pour a=-1,00000e-06, b=100,000, c=-100,000: x1=99999999,0 donne f(x)=-1,90734863e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase21(EnhancedQuadraticSolverTest.java:144)
+</failure>
+  </testcase>
+  <testcase name="testCase22" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.001"/>
+  <testcase name="testCase23" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0"/>
+  <testcase name="testCase24" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.004">
+    <failure message="Cas 24: a=1.00e-06, b=-1.00e+02, c=1.00e-06: Solution invalide pour a=1,00000e-06, b=-100,000, c=1,00000e-06: x2=100000000 donne f(x)=1,00000000e-06 (devrait être proche de 0)" type="java.lang.AssertionError">java.lang.AssertionError: Cas 24: a=1.00e-06, b=-1.00e+02, c=1.00e-06: Solution invalide pour a=1,00000e-06, b=-100,000, c=1,00000e-06: x2=100000000 donne f(x)=1,00000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase24(EnhancedQuadraticSolverTest.java:159)
+</failure>
+  </testcase>
+  <testcase name="testCase25" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.001"/>
+  <testcase name="testCase26" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.002"/>
+  <testcase name="testCase27" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.004">
+    <failure message="Cas 27: a=1.00e-06, b=-1.00e+08, c=1.00e-06: Solution invalide pour a=1,00000e-06, b=-1,00000e+08, c=1,00000e-06: x2=1,00000000e+14 donne f(x)=1,00000000e-06 (devrait être proche de 0)" type="java.lang.AssertionError">java.lang.AssertionError: Cas 27: a=1.00e-06, b=-1.00e+08, c=1.00e-06: Solution invalide pour a=1,00000e-06, b=-1,00000e+08, c=1,00000e-06: x2=1,00000000e+14 donne f(x)=1,00000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase27(EnhancedQuadraticSolverTest.java:174)
+</failure>
+  </testcase>
+  <testcase name="testCase28" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0"/>
+  <testcase name="testCase29" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.001"/>
+  <testcase name="testCase30" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.005"/>
+  <testcase name="testCase31" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.016">
+    <failure message="Cas 3: a=-1.00e-06, b=0.00e+00, c=-1.00e-06: Solution invalide pour a=-1,00000e-06, b=0,00000, c=-1,00000e-06: x1=0,00000000 donne f(x)=-1,00000000e-06 (devrait être proche de 0)" type="java.lang.AssertionError">java.lang.AssertionError: Cas 3: a=-1.00e-06, b=0.00e+00, c=-1.00e-06: Solution invalide pour a=-1,00000e-06, b=0,00000, c=-1,00000e-06: x1=0,00000000 donne f(x)=-1,00000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase31(EnhancedQuadraticSolverTest.java:195)
+</failure>
+  </testcase>
+  <testcase name="testCase32" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0"/>
+  <testcase name="testCase33" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.004"/>
+  <testcase name="testCase34" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.002">
+    <failure message="Cas 6: a=1.00e-06, b=1.00e-06, c=-1.00e-06: Solution invalide pour a=1,00000e-06, b=1,00000e-06, c=-1,00000e-06: x1=-0,500000000 donne f(x)=-1,25000000e-06 (devrait être proche de 0)" type="java.lang.AssertionError">java.lang.AssertionError: Cas 6: a=1.00e-06, b=1.00e-06, c=-1.00e-06: Solution invalide pour a=1,00000e-06, b=1,00000e-06, c=-1,00000e-06: x1=-0,500000000 donne f(x)=-1,25000000e-06 (devrait être proche de 0)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testQuadraticCase(EnhancedQuadraticSolverTest.java:26)
+	at com.mycompany.tp2.EnhancedQuadraticSolverTest.testCase34(EnhancedQuadraticSolverTest.java:210)
+</failure>
+  </testcase>
+  <testcase name="testCase35" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.004"/>
+  <testcase name="testCase36" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0"/>
+  <testcase name="testCase37" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.003"/>
+  <testcase name="testCase38" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.001"/>
+  <testcase name="testCase39" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.003"/>
+  <testcase name="testCase40" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.002"/>
+  <testcase name="testCase41" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.001"/>
+  <testcase name="testCase42" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.002"/>
+  <testcase name="testCase43" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.001"/>
+  <testcase name="testCase44" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0"/>
+  <testcase name="testCase45" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0"/>
+  <testcase name="testCase46" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.007"/>
+  <testcase name="testCase47" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.001"/>
+  <testcase name="testCase48" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0"/>
+  <testcase name="testCase49" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0"/>
+  <testcase name="testCase50" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0"/>
+  <testcase name="testCase51" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.009"/>
+  <testcase name="testCase52" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0"/>
+  <testcase name="testCase53" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0"/>
+  <testcase name="testCase54" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.007"/>
+  <testcase name="testCase55" classname="com.mycompany.tp2.EnhancedQuadraticSolverTest" time="0.008"/>
+</testsuite>

@@ -1,0 +1,145 @@
+package com.mycompany.tp2;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ * Tests améliorés pour le résolveur d'équations quadratiques avec messages d'erreur personnalisés
+ * et validation des solutions par évaluation du polynôme
+ */
+public class EnhancedQuadraticSolverTest {
+    
+    private final QuadraticSolver solver = new StandardQuadraticSolver();
+    private static final double TOLERANCE = 1e-9;
+    
+    /**
+     * Méthode de test générique qui vérifie une équation et affiche un message personnalisé en cas d'échec
+     */
+    private void testQuadraticCase(double a, double b, double c, QuadraticSolver.SolutionType expectedType, String testDescription) {
+        QuadraticSolver.QuadraticResult result = solver.solve(a, b, c);
+        
+        // Utilise la classe PolynomialValidator pour vérifier le résultat
+        String errorMessage = PolynomialValidator.validateQuadraticResult(a, b, c, result, expectedType, TOLERANCE);
+        
+        // Si un message d'erreur est retourné, le test échoue avec ce message personnalisé
+        if (errorMessage != null) {
+            fail(testDescription + ": " + errorMessage);
+        }
+        
+        // Vérifications supplémentaires pour les cas spécifiques
+        if (expectedType == QuadraticSolver.SolutionType.TWO_REAL_SOLUTIONS) {
+            assertEquals("Le nombre de solutions doit être 2", 2, result.getNumberOfSolutions());
+        } else if (expectedType == QuadraticSolver.SolutionType.ONE_REAL_SOLUTION 
+                || expectedType == QuadraticSolver.SolutionType.LINEAR_SOLUTION) {
+            assertEquals("Le nombre de solutions doit être 1", 1, result.getNumberOfSolutions());
+        } else if (expectedType == QuadraticSolver.SolutionType.NO_REAL_SOLUTION 
+                || expectedType == QuadraticSolver.SolutionType.NO_SOLUTION) {
+            assertEquals("Le nombre de solutions doit être 0", 0, result.getNumberOfSolutions());
+        }
+    }
+    
+    @Test
+    public void testTwoRealSolutions() {
+        // x² - 3x + 2 = 0, solutions: 1 et 2
+        testQuadraticCase(1.0, -3.0, 2.0, QuadraticSolver.SolutionType.TWO_REAL_SOLUTIONS, 
+                          "Équation avec deux racines distinctes (1 et 2)");
+        
+        // -x² + 4x - 3 = 0, solutions: 1 et 3
+        testQuadraticCase(-1.0, 4.0, -3.0, QuadraticSolver.SolutionType.TWO_REAL_SOLUTIONS, 
+                          "Équation avec coefficient négatif pour x²");
+        
+        // Cas avec coefficients très grands
+        testQuadraticCase(1e8, 2e8, 1.0, QuadraticSolver.SolutionType.TWO_REAL_SOLUTIONS, 
+                          "Équation avec coefficients très grands");
+        
+        // Cas avec coefficients très petits
+        testQuadraticCase(1e-6, 3e-6, 1e-6, QuadraticSolver.SolutionType.TWO_REAL_SOLUTIONS, 
+                          "Équation avec coefficients très petits");
+    }
+    
+    @Test
+    public void testOneRealSolution() {
+        // x² - 2x + 1 = 0, solution: x = 1
+        testQuadraticCase(1.0, -2.0, 1.0, QuadraticSolver.SolutionType.ONE_REAL_SOLUTION, 
+                          "Équation avec racine double (x = 1)");
+        
+        // 4x² - 12x + 9 = 0, solution: x = 1.5
+        testQuadraticCase(4.0, -12.0, 9.0, QuadraticSolver.SolutionType.ONE_REAL_SOLUTION, 
+                          "Équation avec racine double (x = 1.5)");
+    }
+    
+    @Test
+    public void testNoRealSolution() {
+        // x² + 1 = 0 (pas de solution réelle)
+        testQuadraticCase(1.0, 0.0, 1.0, QuadraticSolver.SolutionType.NO_REAL_SOLUTION, 
+                          "Équation sans solution réelle (x² + 1 = 0)");
+        
+        // x² + 2x + 5 = 0 (pas de solution réelle)
+        testQuadraticCase(1.0, 2.0, 5.0, QuadraticSolver.SolutionType.NO_REAL_SOLUTION, 
+                          "Équation sans solution réelle (Δ < 0)");
+    }
+    
+    @Test
+    public void testLinearSolution() {
+        // 0x² + 2x + 4 = 0 => 2x = -4 => x = -2
+        testQuadraticCase(0.0, 2.0, 4.0, QuadraticSolver.SolutionType.LINEAR_SOLUTION, 
+                          "Équation linéaire (solution = -2)");
+        
+        // 0x² - 3x + 6 = 0 => -3x = -6 => x = 2
+        testQuadraticCase(0.0, -3.0, 6.0, QuadraticSolver.SolutionType.LINEAR_SOLUTION, 
+                          "Équation linéaire (solution = 2)");
+    }
+    
+    @Test
+    public void testInfiniteSolutions() {
+        // 0x² + 0x + 0 = 0 (infinité de solutions)
+        testQuadraticCase(0.0, 0.0, 0.0, QuadraticSolver.SolutionType.INFINITE_SOLUTIONS, 
+                          "Équation à infinité de solutions (0 = 0)");
+    }
+    
+    @Test
+    public void testNoSolution() {
+        // 0x² + 0x + 5 = 0 (pas de solution)
+        testQuadraticCase(0.0, 0.0, 5.0, QuadraticSolver.SolutionType.NO_SOLUTION, 
+                          "Équation sans solution (0 = 5)");
+    }
+    
+    @Test
+    public void testNumericalStability() {
+        // Test avec des valeurs qui pourraient causer des problèmes numériques
+        testQuadraticCase(1e-10, 1.0, 1e-10, QuadraticSolver.SolutionType.TWO_REAL_SOLUTIONS, 
+                          "Stabilité numérique avec coefficients très petits");
+        
+        // Test avec des coefficients très proches mais pas identiques
+        testQuadraticCase(1.0, 2.0, 1.0 + 1e-12, QuadraticSolver.SolutionType.TWO_REAL_SOLUTIONS, 
+                          "Stabilité numérique avec discriminant proche de zéro");
+    }
+    
+    @Test
+    public void testPairwiseScenarios() {
+        // Cas issus du test pairwise
+        testQuadraticCase(1e8, 0.0, 1e8, QuadraticSolver.SolutionType.NO_REAL_SOLUTION, "Pairwise: a grand, b nul, c grand");
+        testQuadraticCase(100.0, -1e-6, 0.0, QuadraticSolver.SolutionType.TWO_REAL_SOLUTIONS, "Pairwise: a moyen, b très petit négatif, c nul");
+        testQuadraticCase(1e-6, 1e8, -1e8, QuadraticSolver.SolutionType.TWO_REAL_SOLUTIONS, "Pairwise: a très petit, b grand, c grand négatif");
+        testQuadraticCase(0.0, 1e-6, 100.0, QuadraticSolver.SolutionType.LINEAR_SOLUTION, "Pairwise: a nul, b très petit, c moyen");
+        testQuadraticCase(-1e-6, 100.0, 1e-6, QuadraticSolver.SolutionType.TWO_REAL_SOLUTIONS, "Pairwise: a très petit négatif, b moyen, c très petit");
+        testQuadraticCase(0.0, 0.0, 0.0, QuadraticSolver.SolutionType.INFINITE_SOLUTIONS, "Pairwise: a, b, c tous nuls");
+    }
+    
+    @Test
+    public void testDirectPolynomialEvaluation() {
+        // Test direct de la fonction d'évaluation du polynôme
+        double a = 1.0, b = -5.0, c = 6.0; // x² - 5x + 6 = 0, solutions: 2 et 3
+        
+        QuadraticSolver.QuadraticResult result = solver.solve(a, b, c);
+        assertEquals(QuadraticSolver.SolutionType.TWO_REAL_SOLUTIONS, result.getType());
+        double[] solutions = result.getSolutions();
+        
+        // Vérifie directement que f(x1) et f(x2) sont proches de zéro
+        for (int i = 0; i < solutions.length; i++) {
+            double evaluation = PolynomialValidator.evaluateQuadratic(a, b, c, solutions[i]);
+            String message = String.format("La solution x%d = %.6g doit donner une valeur proche de zéro", i+1, solutions[i]);
+            assertTrue(message, Math.abs(evaluation) < TOLERANCE);
+        }
+    }
+}
