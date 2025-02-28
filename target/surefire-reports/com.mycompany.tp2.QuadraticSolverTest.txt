@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.tp2.QuadraticSolverTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.372 s <<< FAILURE! - in com.mycompany.tp2.QuadraticSolverTest
+testTwoRealSolutions(com.mycompany.tp2.QuadraticSolverTest)  Time elapsed: 0.03 s  <<< FAILURE!
+org.junit.internal.ArrayComparisonFailure: arrays first differed at element [0]; expected:<1.0> but was:<3.0>
+	at com.mycompany.tp2.QuadraticSolverTest.testTwoRealSolutions(QuadraticSolverTest.java:31)
+Caused by: java.lang.AssertionError: expected:<1.0> but was:<3.0>
+	at com.mycompany.tp2.QuadraticSolverTest.testTwoRealSolutions(QuadraticSolverTest.java:31)
+
+testPairwiseScenarios(com.mycompany.tp2.QuadraticSolverTest)  Time elapsed: 0.07 s  <<< FAILURE!
+java.lang.AssertionError: Pour a=100.0, b=-1.0E-6, c=0.0 expected:<TWO_REAL_SOLUTIONS> but was:<ONE_REAL_SOLUTION>
+	at com.mycompany.tp2.QuadraticSolverTest.testSinglePairwiseCase(QuadraticSolverTest.java:122)
+	at com.mycompany.tp2.QuadraticSolverTest.testPairwiseScenarios(QuadraticSolverTest.java:113)
+
+testNumericalStability(com.mycompany.tp2.QuadraticSolverTest)  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.AssertionError: expected:<TWO_REAL_SOLUTIONS> but was:<ONE_REAL_SOLUTION>
+	at com.mycompany.tp2.QuadraticSolverTest.testNumericalStability(QuadraticSolverTest.java:106)
+
